@@ -1,11 +1,11 @@
 import java.util.Scanner;
-public class RSAKeys{
-    public static void main(String[] args){
-        Scanner scanner=new Scanner(System.in);
+public class RSAKeys {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
         long e = 65537;
         long n = 10807;
-        long d = 2873;
+        long d = 2873; 
 
         System.out.println("Public key (e, n): (" + e + ", " + n + ")");
         System.out.println("Private key (d, n): (" + d + ", " + n + ")");
@@ -53,11 +53,11 @@ public class RSAKeys{
         }
     }
 
-    public static long modExp(long base, long exp, long mod) {j
+    public static long modExp(long base, long exp, long mod) {
         long result = 1;
         base = base % mod;
         while (exp > 0) {
-            if (exp % 2 == 1) {c
+            if (exp % 2 == 1) {
                 result = (result * base) % mod;
             }
             exp = exp >> 1;
